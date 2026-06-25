@@ -12,49 +12,43 @@
     src="/favicon.ico"
     class="w-10 h-10"
   >
-    <UPageCard
+<UPageCard
       title="ascii-path"
       description="Convert Paths to Ascii"
-      icon="i-simple-icons-tailwindcss"
+      icon="i-lucide-spline" 
       to="./pngtoascii"
-
       orientation="horizontal"
       spotlight
       spotlight-color="primary"
       _class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]" 
     >
-      <!-- <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" /> -->
-    </UPageCard>
+      </UPageCard>
+
     <UPageCard
       title="ascii-shape"
       description="Convert Shapes to Ascii"
-      icon="i-simple-icons-tailwindcss"
+      icon="i-lucide-shapes" 
       to="./pngtoascii/shape"
-
       orientation="horizontal"
       spotlight
       spotlight-color="primary"
       _class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]" 
     >
-      <!-- <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" /> -->
-    </UPageCard>
+      </UPageCard>
+
     <UPageCard
       title="ascii-bigtext"
       description="Convert text to Ascii"
-      icon="i-simple-icons-tailwindcss"
+      icon="i-lucide-type" 
       to="./pngtoascii/bigtext"
-
       orientation="horizontal"
       spotlight
       spotlight-color="primary"
       _class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]" 
-
-
       highlight
       highlight-color="primary"
     >
-      <!-- <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" /> -->
-    </UPageCard>
+      </UPageCard>
 
   </div>
 
