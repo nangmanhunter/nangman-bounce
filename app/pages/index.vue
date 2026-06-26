@@ -38,7 +38,7 @@
 
     <UPageCard
       title="ascii-bigtext"
-      description="Convert text to Ascii"
+      description="Convert Texts to Ascii"
       icon="i-lucide-type" 
       to="./pngtoascii/bigtext"
       orientation="horizontal"
