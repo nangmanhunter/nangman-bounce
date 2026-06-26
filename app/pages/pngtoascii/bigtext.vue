@@ -1,6 +1,9 @@
+<!--
+- BIG TEXT Generator (FIGlet)
+-->
 <template>
   <div class="big-text-container">
-    <h2>NangMan BIG TEXT Generator (FIGlet)</h2>
+    <h2>ASCII Converter Text</h2>
 
     <div class="input-section">
       <input
@@ -11,17 +14,34 @@
       >
     </div>
 
-    <div v-if="inputText" class="control-section">
+    <div
+      v-if="inputText"
+      class="control-section"
+    >
       <label>폰트 스타일 선택:</label>
-      <select v-model="selectedFont" @change="generateBigText">
-        <option value="Standard">Standard (기본)</option>
-        <option value="Slant">Slant (기울임)</option>
-        <option value="Shadow">Shadow (그림자)</option>
-        <option value="3D Diagonal">3D Diagonal (3차원)</option>
+      <select
+        v-model="selectedFont"
+        @change="generateBigText"
+      >
+        <option value="Standard">
+          Standard (기본)
+        </option>
+        <option value="Slant">
+          Slant (기울임)
+        </option>
+        <option value="Shadow">
+          Shadow (그림자)
+        </option>
+        <option value="3D Diagonal">
+          3D Diagonal (3차원)
+        </option>
       </select>
     </div>
 
-    <div v-if="asciiResult" class="result-section">
+    <div
+      v-if="asciiResult"
+      class="result-section"
+    >
       <h3>변환 결과</h3>
       <pre>{{ asciiResult }}</pre>
     </div>

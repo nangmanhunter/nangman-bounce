@@ -9,7 +9,7 @@
           class="text-primary-500 w-5 h-5"
         />
         <h1 class="text-lg font-bold text-gray-950 dark:text-white">
-          ASCII Converter
+          ASCII Converter Path
         </h1>
         <span
           class="text-xs text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded"

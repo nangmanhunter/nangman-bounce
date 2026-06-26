@@ -1,7 +1,5 @@
 <template>
   <div class="ascii-converter-container max-w-4xl mx-auto p-6">
-
-    
     <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-4 mb-6">
       <div class="flex items-center gap-2">
         <UIcon
@@ -9,13 +7,15 @@
           class="text-primary-500 w-5 h-5"
         />
         <h1 class="text-lg font-bold text-gray-950 dark:text-white">
-          NangMan Edge ASCII
+          ASCII Converter Shape
         </h1>
         <span class="text-xs text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">
           PNG
         </span>
       </div>
-      <p class="text-xs text-gray-500">이미지를 텍스트 아트로 변환</p>
+      <p class="text-xs text-gray-500">
+        이미지를 텍스트 아트로 변환
+      </p>
     </div>
 
     <div class="upload-section w-full max-w-md mx-auto mb-6">
@@ -24,7 +24,10 @@
       >
         <div class="flex items-center gap-3">
           <div class="p-2 rounded-lg bg-primary-50 dark:bg-primary-950 text-primary-600 group-hover:scale-105 transition-transform">
-            <UIcon name="i-heroicons-cloud-arrow-up" class="w-5 h-5 block" />
+            <UIcon
+              name="i-heroicons-cloud-arrow-up"
+              class="w-5 h-5 block"
+            />
           </div>
           <div class="flex flex-col text-left">
             <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">이미지 업로드</span>
@@ -41,7 +44,7 @@
           accept="image/png"
           class="hidden"
           @change="handleImageUpload"
-        />
+        >
       </label>
     </div>
 
@@ -49,7 +52,6 @@
       v-if="imageSrc"
       class="control-section flex flex-col gap-4 p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800 mb-6"
     >
-      
       <div class="flex items-center justify-between gap-6">
         <div class="flex flex-col gap-1 text-left">
           <label class="text-sm font-semibold text-gray-700 dark:text-gray-300">
@@ -71,11 +73,11 @@
             step="10"
             class="w-full accent-primary-500 cursor-pointer"
             @input="convertToAscii"
-          />
+          >
         </div>
       </div>
 
-      <hr class="border-gray-200 dark:border-gray-800" />
+      <hr class="border-gray-200 dark:border-gray-800">
 
       <div class="flex items-center justify-between gap-6">
         <div class="flex flex-col gap-1 text-left">
@@ -97,12 +99,10 @@
             step="5"
             class="w-full accent-primary-500 cursor-pointer"
             @input="convertToAscii"
-          />
+          >
         </div>
       </div>
-
     </div>
-
 
     <!-- <h2>NangMan Edge-Based ASCII Art Converter</h2>
 
@@ -143,18 +143,6 @@
         <span class="tip">※ 값이 낮을수록 미세한 선까지 전부 잡아냅니다.</span>
       </div>
     </div> -->
-
-
-
-
-
-    
-
-
-
-
-
-
 
     <div
       v-if="asciiResult"
