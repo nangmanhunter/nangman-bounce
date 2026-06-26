@@ -1,42 +1,56 @@
 <template>
-  <div class="ascii-converter-container">
-
-
-    <UPageHeader
-      title="ASCII Art Converter"
-      description="png to ascii, svg to ascii"
-      headline="ascii-path"
-    />
-
-    <div class="upload-section">
-      <!-- <input
-        type="file"
-        accept="image/png"
-        @change="handleImageUpload"
-      > -->
-
-      <div class="w-full max-w-md p-4">
-        <label
-          class="flex items-center justify-between w-full p-2 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-700"
-        >
-          <span
-            class="px-4 py-1.5 bg-slate-800 text-white text-sm rounded-md font-medium"
-          >
-            파일 선택
-          </span>
-
-          <input
-            type="file"
-            accept="image/png"
-            class="text-sm text-gray-500 w-40 file:hidden"
-            @change="handleImageUpload"
-          />
-        </label>
+  <div class="ascii-converter-container max-w-4xl mx-auto p-6">
+<div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-4 mb-6">
+      <div class="flex items-center gap-2">
+        <UIcon name="i-heroicons-paint-brush-20-solid" class="text-primary-500 w-5 h-5" />
+        <h1 class="text-lg font-bold text-gray-950 dark:text-white">ASCII Converter</h1>
+        <span class="text-xs text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">PNG</span>
       </div>
+      
+      <p class="text-xs text-gray-500">이미지를 텍스트 아트로 변환</p>
     </div>
+
+    <div class="upload-section w-full max-w-md mx-auto">
+      <label
+        class="group flex items-center justify-between w-full p-3 px-4 border border-gray-300 dark:border-gray-700 rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-900/50 hover:border-primary-500 hover:bg-gray-100 dark:hover:bg-gray-900 transition-all"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="p-2 rounded-lg bg-primary-50 dark:bg-primary-950 text-primary-600 group-hover:scale-105 transition-transform"
+          >
+            <UIcon name="i-heroicons-cloud-arrow-up" class="w-5 h-5 block" />
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300"
+              >이미지 업로드</span
+            >
+            <span class="text-xxs text-gray-400 font-mono">Only PNG</span>
+          </div>
+        </div>
+
+        <span
+          class="text-xs bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-2.5 py-1 rounded-md shadow-sm text-gray-600 dark:text-gray-400 group-hover:text-primary-500 transition-colors"
+        >
+          파일 선택
+        </span>
+
+        <input
+          type="file"
+          accept="image/png"
+          class="hidden"
+          @change="handleImageUpload"
+        />
+      </label>
+    </div>
+
+
+
+
+
 
     <div v-if="imageSrc" class="control-section">
       <label>변환 너비(글자 수): {{ targetWidth }}px</label>
+      
       <input
         v-model.number="targetWidth"
         type="range"
@@ -50,6 +64,9 @@
         >※ 너비가 커질수록 디테일이 살고 텍스트 용량이 커집니다.</span
       >
     </div>
+
+
+    
 
     <div v-if="asciiResult" class="result-section">
       <h3>변환 결과 (Text)</h3>
