@@ -1,6 +1,110 @@
 <template>
-  <div class="ascii-converter-container">
-    <h2>NangMan Edge-Based ASCII Art Converter</h2>
+  <div class="ascii-converter-container max-w-4xl mx-auto p-6">
+
+    
+    <div class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-4 mb-6">
+      <div class="flex items-center gap-2">
+        <UIcon
+          name="i-heroicons-paint-brush-20-solid"
+          class="text-primary-500 w-5 h-5"
+        />
+        <h1 class="text-lg font-bold text-gray-950 dark:text-white">
+          NangMan Edge ASCII
+        </h1>
+        <span class="text-xs text-gray-400 font-mono bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">
+          PNG
+        </span>
+      </div>
+      <p class="text-xs text-gray-500">이미지를 텍스트 아트로 변환</p>
+    </div>
+
+    <div class="upload-section w-full max-w-md mx-auto mb-6">
+      <label
+        class="group flex items-center justify-between w-full p-3 px-4 border border-gray-300 dark:border-gray-700 rounded-xl cursor-pointer bg-gray-50 dark:bg-gray-900/50 hover:border-primary-500 hover:bg-gray-100 dark:hover:bg-gray-900 transition-all"
+      >
+        <div class="flex items-center gap-3">
+          <div class="p-2 rounded-lg bg-primary-50 dark:bg-primary-950 text-primary-600 group-hover:scale-105 transition-transform">
+            <UIcon name="i-heroicons-cloud-arrow-up" class="w-5 h-5 block" />
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">이미지 업로드</span>
+            <span class="text-xxs text-gray-400 font-mono">Only PNG</span>
+          </div>
+        </div>
+
+        <span class="text-xs bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-2.5 py-1 rounded-md shadow-sm text-gray-600 dark:text-gray-400 group-hover:text-primary-500 transition-colors">
+          파일 선택
+        </span>
+
+        <input
+          type="file"
+          accept="image/png"
+          class="hidden"
+          @change="handleImageUpload"
+        />
+      </label>
+    </div>
+
+    <div
+      v-if="imageSrc"
+      class="control-section flex flex-col gap-4 p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800 mb-6"
+    >
+      
+      <div class="flex items-center justify-between gap-6">
+        <div class="flex flex-col gap-1 text-left">
+          <label class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            변환 너비(글자 수):
+            <span class="font-mono text-primary-500 font-bold">{{ targetWidth }}px</span>
+          </label>
+          <span class="text-xs text-gray-400 dark:text-gray-500">
+            ※ 너비가 커질수록 디테일이 살고 텍스트 용량이 커집니다.
+          </span>
+        </div>
+
+        <div class="flex-1 max-w-xs">
+          <input
+            v-model.number="targetWidth"
+            type="range"
+            min="50"
+            max="5000"
+            _max="200"
+            step="10"
+            class="w-full accent-primary-500 cursor-pointer"
+            @input="convertToAscii"
+          />
+        </div>
+      </div>
+
+      <hr class="border-gray-200 dark:border-gray-800" />
+
+      <div class="flex items-center justify-between gap-6">
+        <div class="flex flex-col gap-1 text-left">
+          <label class="text-sm font-semibold text-gray-700 dark:text-gray-300">
+            선 민감도(Threshold):
+            <span class="font-mono text-primary-500 font-bold">{{ threshold }}</span>
+          </label>
+          <span class="text-xs text-gray-400 dark:text-gray-500">
+            ※ 값이 낮을수록 미세한 선까지 전부 잡아냅니다.
+          </span>
+        </div>
+
+        <div class="flex-1 max-w-xs">
+          <input
+            v-model.number="threshold"
+            type="range"
+            min="20"
+            max="150"
+            step="5"
+            class="w-full accent-primary-500 cursor-pointer"
+            @input="convertToAscii"
+          />
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- <h2>NangMan Edge-Based ASCII Art Converter</h2>
 
     <div class="upload-section">
       <input
@@ -38,7 +142,19 @@
         >
         <span class="tip">※ 값이 낮을수록 미세한 선까지 전부 잡아냅니다.</span>
       </div>
-    </div>
+    </div> -->
+
+
+
+
+
+    
+
+
+
+
+
+
 
     <div
       v-if="asciiResult"
@@ -199,7 +315,7 @@ const convertToAscii = () => {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
   padding: 15px;
   border-radius: 6px;
 }
