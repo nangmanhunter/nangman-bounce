@@ -59,7 +59,7 @@ import slantFont from 'figlet/importable-fonts/Slant.js'
 import shadowFont from 'figlet/importable-fonts/Shadow.js'
 import diagonalFont from 'figlet/importable-fonts/3D Diagonal.js'
 
-const inputText = ref('NangMan')
+const inputText = ref('nangman X')
 const selectedFont = ref('Standard')
 const asciiResult = ref('')
 

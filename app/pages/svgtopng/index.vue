@@ -1,3 +1,7 @@
+<!-- 
+RoutePage
+- GatewayPage for outerlink 
+-->
 <!-- <template>
   <UPageCard
     title="Tailwind CSS"

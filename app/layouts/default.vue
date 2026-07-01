@@ -1,11 +1,7 @@
 <template>
-  <div>
-    <!-- <UHeader /> -->
-
-    <UMain>
-      <slot />
-    </UMain>
-
-    <UFooter />
-  </div>
+  <MySidebar
+    mode="modal"
+  >
+    <slot />
+  </MySidebar>
 </template>
