@@ -1,3 +1,18 @@
+<!-- 
+/svgtopng/bounce/ vs. /bounce/svgtopng/
+- /svgtopng/bounce/>>/bounce/svgtopng/
+  - 사람들 손갈것 기준으로.
+  - 사람들 먼저볼것 기준으로.
+  - 단순테마적 우선순위ㄴㄴ.
+    - ❌bounce>>svgtopng
+  - 단계적 일반적 접근적 우선순위ㄱㄱ.
+    - svgtopng>>bounce
+- 필요하면
+  - 테마별로 싹따로 모을것.
+  - bounce cascade ascii 
+  - 이런것들 따로모을것ㄱㄱ.
+
+-->
 <template>
   <div class="full-screen-wrapper min-h-screen w-full flex items-center justify-center bg-zinc-950 p-6 font-sans relative overflow-hidden">
     <div class="absolute w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] -top-40 -left-40 pointer-events-none" />

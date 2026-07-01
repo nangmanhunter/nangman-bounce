@@ -2,20 +2,10 @@
 RoutePage
 - GatewayPage for outerlink 
 -->
-<!-- <template>
-  <UPageCard
-    title="Tailwind CSS"
-    description="Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements."
-    icon="i-simple-icons-tailwindcss"
-    to="https://tailwindcss.com/docs/v4-beta"
-    target="_blank"
-    variant="soft"
-  />
-</template> -->
 <template>
   <div class="flex flex-col md:flex-row min-h-screen w-full overflow-hidden bg-zinc-950 font-sans">
     <NuxtLink
-      to="/bounce/svgtopng"
+      to="/svgtopng/bounce/"
       class="group relative flex flex-1 items-center justify-center p-8 transition-all duration-500 ease-in-out hover:flex-[1.5] bg-gradient-to-br from-indigo-600 to-purple-700 border-b md:border-b-0 md:border-r border-zinc-800/50"
     >
       <div class="absolute inset-0 bg-black opacity-10 transition-opacity duration-300 group-hover:opacity-0" />
@@ -49,7 +39,7 @@ RoutePage
     </NuxtLink>
 
     <NuxtLink
-      to="/cascade/svgtopng"
+      to="/svgtopng/cascade/"
       class="group relative flex flex-1 items-center justify-center p-8 transition-all duration-500 ease-in-out hover:flex-[1.5] bg-gradient-to-br from-emerald-600 to-teal-700"
     >
       <div class="absolute inset-0 bg-black opacity-10 transition-opacity duration-300 group-hover:opacity-0" />

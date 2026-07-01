@@ -31,12 +31,23 @@ defineProps<{
 
 const items: NavigationMenuItem[] = [
   { icon: 'i-lucide-house', label: 'Home', to: '/' },
-  { icon: 'i-lucide-box', label: 'svg-to-png', to: '/svgtopng' },
-  { icon: 'i-lucide-box', label: 'svg-to-png/bounce', to: '/bounce/svgtopng' },
-  { icon: 'i-lucide-box', label: 'svg-to-png/cascade', to: '/cascade/svgtopng' },
-  { icon: 'i-lucide-box', label: 'png-to-ascii', to: '/pngtoascii' },
-  { icon: 'i-lucide-box', label: 'png-to-ascii-bigtext', to: '/pngtoascii/bigtext' },
-  { icon: 'i-lucide-box', label: 'png-to-ascii-shape', to: '/pngtoascii/shape' },
+  { icon: 'i-lucide-box', label: 'svg-to-png/',
+    defaultOpen: true,
+    children: [
+      { icon: 'i-lucide-box', label: 'upload/',  to: '/svgtopng/upload/' },
+      { icon: 'i-lucide-box', label: 'bounce/',  to: '/svgtopng/bounce/' },
+      { icon: 'i-lucide-box', label: 'cascade/', to: '/svgtopng/cascade/' },
+    ]
+  },
+  { icon: 'i-lucide-box', label: 'png-to-ascii/',
+    defaultOpen: true,
+    children: [
+      { icon: 'i-lucide-box', label: 'bigtext/', to: '/pngtoascii/bigtext/' },
+      { icon: 'i-lucide-box', label: 'path/', to: '/pngtoascii/path/' },
+      { icon: 'i-lucide-box', label: 'shape/', to: '/pngtoascii/shape/' },
+    ]
+  },
+
 ]
 </script>
 

@@ -5,8 +5,7 @@ export default withNuxt({
   rules: {
     '@stylistic/no-multiple-empty-lines': 'off',
     '@stylistic/comma-dangle': 'off',
-
-    
+    '@stylistic/no-multi-spaces': 'off',
 
     // 💡 줄바꿈, 띄어쓰기 관련 잔소리들을 'off'로 끕니다.
     // '@stylistic/indent': 'off',
