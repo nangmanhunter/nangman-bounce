@@ -47,7 +47,7 @@ const items: NavigationMenuItem[] = [
       { icon: 'i-lucide-box', label: 'shape/', to: '/pngtoascii/shape/' },
     ]
   },
-  { icon: 'i-lucide-package', label: 'png-to-ascii/', to: '/ascii' },
+  { icon: 'i-lucide-container', label: 'png-to-ascii/', to: '/ascii' },
 
 ]
 </script>
