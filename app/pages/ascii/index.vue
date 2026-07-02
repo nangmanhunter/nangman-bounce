@@ -7,10 +7,7 @@
       orientation="horizontal"
     >
       <div>
-        <img
-          src="/favicon.ico"
-          class="w-10 h-10"
-        >
+        <FaviconImage class="w-10 h-10" />
         <UPageCard
           title="ascii-path"
           description="Convert Paths to Ascii"
