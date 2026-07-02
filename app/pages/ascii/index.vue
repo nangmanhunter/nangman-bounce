@@ -15,7 +15,7 @@
           title="ascii-path"
           description="Convert Paths to Ascii"
           icon="i-lucide-spline"
-          to="./pngtoascii"
+          to="./pngtoascii/path"
           orientation="horizontal"
           spotlight
           spotlight-color="primary"
