@@ -24,5 +24,11 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
-  }
+  },
+
+
+  extends: [
+    // github:유저이름/저장소이름#브랜치또는태그
+    'github:nangmanhunter/nuxt-layers#main'
+  ],
 })

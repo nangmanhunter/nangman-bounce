@@ -4,7 +4,7 @@
 canvas.width = width;
 -->
 <template>
-  <div class="converter-container">
+  <div class="converter-container flex flex-col items-center">
     <div class="upload-section">
       <label
         for="svg-file"

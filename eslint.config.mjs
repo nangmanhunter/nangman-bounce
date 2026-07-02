@@ -6,6 +6,7 @@ export default withNuxt({
     '@stylistic/no-multiple-empty-lines': 'off',
     '@stylistic/comma-dangle': 'off',
     '@stylistic/no-multi-spaces': 'off',
+    'nuxt/nuxt-config-keys-order': 'off',
 
     // 💡 줄바꿈, 띄어쓰기 관련 잔소리들을 'off'로 끕니다.
     // '@stylistic/indent': 'off',
